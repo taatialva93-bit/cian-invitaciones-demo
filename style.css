@@ -42,8 +42,9 @@ body{
 .destellos{
   position:absolute;
   inset:0;
-  background-image:radial-gradient(#fff 1px, transparent 1.5px);
-  background-size:34px 34px;
+background-image:
+  linear-gradient(rgba(255,255,255,.20), rgba(255,255,255,.20)),
+  url("assets/fondo-disco.png");
   opacity:.16;
   animation:parpadeo 7s ease-in-out infinite;
 }
