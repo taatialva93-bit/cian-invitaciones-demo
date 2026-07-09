@@ -3,120 +3,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cumple de Sofía - Invitación Digital</title>
+  <title>Rena Mis XV</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="loader">
-  <div class="loader-content">
-    <div class="unicornio">🦄</div>
-    <p>Cargando magia...</p>
-  </div>
-</div>
+<section class="portada" id="portada">
+  <div class="destellos"></div>
 
-<section class="portada">
-  <div class="card-portada">
-    <p class="mini">Invitación digital</p>
-    <h1>Sofía</h1>
-    <h2>cumple 5 años</h2>
-    <p>Una tarde mágica nos espera entre arcoíris, dulces y mucha diversión.</p>
-    <button onclick="abrirInvitacion()">Abrir invitación ✨</button>
+  <div class="contenido-portada">
+    <h1 class="nombre">Rena</h1>
+    <h2 class="titulo">Mis XV</h2>
+    <button onclick="abrirInvitacion()">Abrir invitación</button>
   </div>
 </section>
 
-<main id="invitacion" class="oculto">
+<main id="invitacion">
+<section class="frase-bienvenida">
 
-  <section class="hero animar">
-    <section class="hero animar">
-  <div class="confetti" id="confetti"></div>
+    <p>
+        Acompañame a celebrar este gran día
+    </p>
 
-  <div class="decoracion">☁️ 🌈 🦄 ✨ ☁️</div>
-
-  <h1>¡Estás invitado!</h1>
-  <h2>Cumple de Sofía</h2>
-  <p>Una tarde mágica nos espera</p>
-
-  <button onclick="musica()">🎵 Música</button>
 </section>
-
-    <audio id="audio" loop>
-      <source src="musica.mp3" type="audio/mpeg">
-    </audio>
-  </section>
-
-  <section class="video animar">
-    <h2>Video de bienvenida</h2>
-    <video controls>
-      <source src="video.mp4" type="video/mp4">
-    </video>
-  </section>
-
-  <section class="contador animar">
-    <h2>Falta muy poquito</h2>
+  <section class="seccion cuenta">
+    <h2>Cuenta regresiva</h2>
     <div id="countdown"></div>
   </section>
 
-  <section class="datos animar">
-   <section class="regalos animar">
-  <h2>Ideas de regalitos</h2>
-  <p>Lo más importante es que vengas a compartir este día especial 💖</p>
-  <div class="regalo-box">
-    🎁 Juguetes creativos <br>
-    📚 Libritos infantiles <br>
-    🧸 Peluches <br>
-    🎨 Materiales para dibujar
-  </div>
-</section>
+  <section class="seccion datos">
+    <h2>Datos del evento</h2>
+    <p><strong>Fecha:</strong> 08/08</p>
+    <p><strong>Hora:</strong> 21:30 a 05:00 hs</p>
+    <p><strong>Lugar:</strong> Salón Mutisia</p>
+    <p><strong>Dirección:</strong> 11 e/ 152 y 153 - Berisso</p>
+  </section>
 
-  <section class="galeria animar">
-    <h2>Galería de fotos</h2>
+  <section class="seccion galeria">
+    <h2>Galería</h2>
     <div class="grid">
-      <img src="foto1.jpg" alt="Foto 1">
-      <img src="foto2.jpg" alt="Foto 2">
-      <img src="foto3.jpg" alt="Foto 3">
-      <img src="foto4.jpg" alt="Foto 4">
+      <img src="assets/foto1.jpg" alt="Foto Rena">
+      <img src="assets/foto2.jpg" alt="Foto Rena">
+      <img src="assets/foto3.jpg" alt="Foto Rena">
     </div>
   </section>
 
-  <section class="confirmar animar">
+  <section class="seccion confirmar">
     <h2>Confirmá tu asistencia</h2>
-    <p>Mandanos tu confirmación por WhatsApp.</p>
-    <a href="https://wa.me/5492210000000?text=Hola! Confirmo asistencia al cumple de Sofía" target="_blank">
-      Confirmar asistencia 💬
+    <a href="https://wa.me/5492214098991?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Rena.%20Mi%20nombre%20es:%20" target="_blank">
+      Confirmar por WhatsApp
     </a>
   </section>
+<section class="seccion regalo">
+  <p class="frase-regalo">
+    Si deseas regalarme algo, puedes hacerlo mediante una transferencia a mi cuenta o en efectivo en un sobre dentro de un cofre que habrá en el salón.
+  </p>
 
-  <section class="mapa animar">
-<section class="mapa animar">
-  <h2>¿Cómo llegar?</h2>
-
-  <iframe 
-    src="https://www.google.com/maps?q=La%20Plata,%20Buenos%20Aires&output=embed"
-    loading="lazy">
-  </iframe>
-
-  <a class="boton-mapa" href="https://www.google.com/maps/search/?api=1&query=La+Plata+Buenos+Aires" target="_blank">
-    Abrir en Google Maps 📍
-  </a>
+  <p class="alias-regalo">Alias: Reni.f</p>
 </section>
-<section class="calendario animar">
-  <h2>Agendá la fecha</h2>
-  <p>No te olvides de este día mágico ✨</p>
 
-  <a class="boton-calendario" 
-     href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Cumple+de+Sofia&dates=20260815T200000Z/20260815T230000Z&details=Te+esperamos+para+festejar+el+cumple+de+Sofia&location=Salon+Arcoiris"
-     target="_blank">
-    Agregar a Google Calendar 📅
-  </a>
+<section class="seccion dress-code">
+  <h2>Dress code</h2>
+  <p>Elegante</p>
+  <span>Evitar colores claros y plateado</span>
 </section>
-  <footer>
-    <h2>¡Te esperamos! 🦄💖</h2>
-    <p>Cian Invitaciones Digitales</p>
-  </footer>
+  <section class="seccion mapa">
+    <h2>Cómo llegar</h2>
+    <iframe src="https://www.google.com/maps?q=Salon%20Mutisia%2011%20e%20152%20y%20153%20Berisso&output=embed"></iframe>
 
+</section>
 </main>
-
+<section class="final">
+  <p>¡Te espero!</p>
+</section>
 <script src="script.js"></script>
 </body>
 </html>
