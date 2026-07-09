@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rena Mis XV</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PORTADA -->
+  <section class="portada" id="portada">
+    <div class="destellos"></div>
+
+    <div class="contenido-portada">
+      <h1 class="nombre">Rena</h1>
+      <h2 class="titulo">Mis XV</h2>
+      <button class="boton-abrir" onclick="abrirInvitacion()">Abrir invitación</button>
+    </div>
+  </section>
+
+  <!-- INVITACIÓN -->
+  <main id="invitacion">
+
+    <section class="frase-bienvenida">
+      <p>Acompañame a celebrar este gran día</p>
+    </section>
+
+    <section class="seccion cuenta">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M18 8h28M18 56h28M22 8v9c0 6 4 10 10 15 6-5 10-9 10-15V8M22 56v-9c0-6 4-10 10-15 6 5 10 9 10 15v9M25 20h14M25 44h14"/>
+        </svg>
+      </div>
+      <h2>Cuenta regresiva</h2>
+      <div id="countdown"></div>
+    </section>
+
+    <section class="seccion datos">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M18 10v8M46 10v8M14 18h36v34H14zM14 28h36M22 36h6M34 36h6M22 44h6M34 44h6"/>
+        </svg>
+      </div>
+      <h2>Datos del evento</h2>
+      <p><strong>Fecha:</strong> 08/08</p>
+      <p><strong>Hora:</strong> 21:30 a 05:00 hs</p>
+      <p><strong>Lugar:</strong> Salón Mutisia</p>
+      <p><strong>Dirección:</strong> 11 e/ 152 y 153 - Berisso</p>
+    </section>
+
+    <section class="seccion galeria">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 20h10l4-6h12l4 6h10v30H12z"/>
+          <circle cx="32" cy="36" r="10"/>
+          <path d="M46 26h2"/>
+        </svg>
+      </div>
+      <h2>Galería</h2>
+      <div class="grid">
+        <img src="assets/foto1.png" alt="Foto Rena">
+<img src="assets/foto2.png" alt="Foto Rena">
+<img src="assets/foto3.png" alt="Foto Rena">
+      </div>
+    </section>
+
+    <section class="seccion confirmar">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M18 18c4-4 9-6 14-6 11 0 20 8 20 19s-9 19-20 19c-4 0-8-1-11-3l-9 3 3-9c-2-3-3-6-3-10 0-5 2-10 6-13z"/>
+          <path d="M25 25c1 8 6 13 14 15M26 25l4 4M39 40l-4-4"/>
+        </svg>
+      </div>
+      <h2>Confirmá tu asistencia</h2>
+      <p>Tu presencia es muy importante para mí.</p>
+      <a class="boton-whatsapp" href="https://wa.me/5492214098991?text=Hola!%20Confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Rena.%20Mi%20nombre%20es:%20" target="_blank">
+        Confirmar por WhatsApp
+      </a>
+    </section>
+
+    <section class="seccion regalo">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M12 26h40v26H12zM10 20h44v8H10zM32 20v32"/>
+          <path d="M32 20c-10 0-14-10-8-13 6-3 8 7 8 13zM32 20c10 0 14-10 8-13-6-3-8 7-8 13z"/>
+        </svg>
+      </div>
+      <p class="frase-regalo">
+        Si deseas regalarme algo, puedes hacerlo mediante una transferencia a mi cuenta o en efectivo en un sobre dentro de un cofre que habrá en el salón.
+      </p>
+      <p class="alias-regalo">Alias: Reni.f</p>
+    </section>
+
+    <section class="seccion dress-code">
+      <div class="icono-lineal icono-dress">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M8 52h20M12 52V20l10-6 8 6-5 10 5 22M10 22l8 5M34 52h22M44 12c4 5 7 13 8 22l4 18H34l4-18c1-9 4-17 8-22zM42 18h12"/>
+        </svg>
+      </div>
+      <h2>Dress code</h2>
+      <p class="dress-principal">Elegante</p>
+      <span>Evitar colores claros y plateado</span>
+    </section>
+
+    <section class="seccion mapa">
+      <div class="icono-lineal">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <path d="M32 58s18-18 18-34c0-10-8-18-18-18s-18 8-18 18c0 16 18 34 18 34z"/>
+          <circle cx="32" cy="24" r="6"/>
+        </svg>
+      </div>
+      <h2>Cómo llegar</h2>
+      <iframe src="https://www.google.com/maps?q=Salon%20Mutisia%2011%20e%20152%20y%20153%20Berisso&output=embed" loading="lazy"></iframe>
+      <a class="boton-mapa" href="https://www.google.com/maps/search/?api=1&query=Salon+Mutisia+11+e+152+y+153+Berisso" target="_blank">
+        Abrir en Google Maps
+      </a>
+    </section>
+
+    <section class="final">
+      <p>¡Te espero!</p>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
