@@ -1,646 +1,428 @@
-/* ==========================
-   RESET
-========================== */
+/* =====================================================
+   RENA MIS XV - ENTREGA
+   Fondo disco + íconos lineales negros + responsive
+===================================================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-
-    background:#000;
-    color:white;
-    overflow-x:hidden;
-    font-family:Arial, Helvetica, sans-serif;
-
+  background:#000;
+  color:#111;
+  overflow-x:hidden;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-
 /* ==========================
-   PORTADA
+   PORTADA NEGRA
 ========================== */
 
 .portada{
-
-    width:100%;
-    height:100vh;
-
-    position:relative;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    overflow:hidden;
-
-    background:
-
-    radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 20%),
-
-    radial-gradient(circle at 80% 10%,rgba(255,255,255,.08),transparent 18%),
-
-    radial-gradient(circle at 70% 70%,rgba(255,255,255,.05),transparent 22%),
-
-    linear-gradient(180deg,#000,#080808,#111);
-
+  width:100%;
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.10),transparent 22%),
+    radial-gradient(circle at 80% 15%,rgba(255,255,255,.08),transparent 18%),
+    radial-gradient(circle at 70% 75%,rgba(255,255,255,.06),transparent 25%),
+    linear-gradient(180deg,#000,#070707,#111);
 }
 
-
-/* Destellos */
-
 .destellos{
-
-    position:absolute;
-    inset:0;
-
-    background-image:
-
-    radial-gradient(#ffffff 1px, transparent 1px);
-
-    background-size:35px 35px;
-
-    opacity:.18;
-
-    animation:parpadeo 8s linear infinite;
-
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(#fff 1px, transparent 1.5px);
+  background-size:34px 34px;
+  opacity:.16;
+  animation:parpadeo 7s ease-in-out infinite;
 }
 
 @keyframes parpadeo{
-
-0%{
-opacity:.08;
+  0%,100%{opacity:.08;}
+  50%{opacity:.25;}
 }
-
-50%{
-opacity:.22;
-}
-
-100%{
-opacity:.08;
-}
-
-}
-
-
-/* ==========================
-   CONTENIDO PORTADA
-========================== */
 
 .contenido-portada{
-
-    position:relative;
-
-    z-index:5;
-
-    text-align:center;
-
+  position:relative;
+  z-index:5;
+  text-align:center;
+  padding:30px;
 }
 
 .nombre{
-
-    font-family:"Palace Script MT","Palace Script",cursive;
-
-    font-size:120px;
-
-    font-weight:normal;
-
-    color:white;
-
-    text-shadow:
-
-    0 0 15px rgba(255,255,255,.25);
-
+  font-family:"Palace Script MT","Palace Script",cursive;
+  font-size:128px;
+  font-weight:normal;
+  line-height:.85;
+  color:#fff;
+  text-shadow:0 0 18px rgba(255,255,255,.28);
 }
-
 
 .titulo{
-
-    margin-top:-15px;
-
-    font-family:"Brim Narrow Face",serif;
-
-    font-size:60px;
-
-    letter-spacing:6px;
-
-    color:#d8d8d8;
-
+  margin-top:10px;
+  font-family:"Brim Narrow Face","Times New Roman",serif;
+  font-size:58px;
+  letter-spacing:7px;
+  color:#d8d8d8;
+  font-weight:normal;
 }
 
-
-button{
-
-    margin-top:45px;
-
-    padding:18px 45px;
-
-    background:transparent;
-
-    border:1px solid silver;
-
-    color:white;
-
-    border-radius:40px;
-
-    cursor:pointer;
-
-    font-family:"Brim Narrow Face",serif;
-
-    font-size:22px;
-
-    letter-spacing:2px;
-
-    transition:.4s;
-
+.boton-abrir{
+  margin-top:42px;
+  padding:18px 46px;
+  background:transparent;
+  border:1px solid #d8d8d8;
+  color:white;
+  border-radius:40px;
+  cursor:pointer;
+  font-family:"Brim Narrow Face","Times New Roman",serif;
+  font-size:22px;
+  letter-spacing:2px;
+  transition:.35s ease;
 }
 
-button:hover{
-
-    background:silver;
-
-    color:black;
-
+.boton-abrir:hover{
+  background:silver;
+  color:black;
+  transform:scale(1.04);
 }
-
 
 /* ==========================
-   INVITACION
+   INTERIOR CON FONDO DISCO
 ========================== */
 
 #invitacion{
-
-    display:none;
-
-    position:relative;
-
-    overflow:hidden;
-
-    min-height:100vh;
-
-    background-image:url("assets/fondo.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-attachment:fixed;
-
-}}
-
-
-/* Glitter */
-
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-background:
-
-radial-gradient(circle,#ffffff55 1px,transparent 1px);
-
-background-size:18px 18px;
-
-opacity:.25;
-
-pointer-events:none;
-
+  display:none;
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  padding:42px 14px 70px;
+  background-image:
+    linear-gradient(rgba(255,255,255,.20), rgba(255,255,255,.20)),
+    url("assets/fondo-disco.png");
+  background-size:cover;
+  background-position:center top;
+  background-attachment:fixed;
 }
 
+/* velo suave para lectura */
+#invitacion::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,.18);
+  pointer-events:none;
+  z-index:0;
+}
 
 /* ==========================
-   SECCIONES
+   FRASE BIENVENIDA
+========================== */
+
+.frase-bienvenida{
+  position:relative;
+  z-index:2;
+  width:min(92%, 880px);
+  margin:30px auto 38px;
+  padding:32px 24px;
+  text-align:center;
+  background:rgba(255,255,255,.55);
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:28px;
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+  backdrop-filter:blur(6px);
+}
+
+.frase-bienvenida p{
+  font-family:"Palace Script MT","Palace Script",cursive;
+  font-size:68px;
+  line-height:1;
+  color:#111;
+  text-shadow:2px 2px 8px rgba(255,255,255,.35);
+}
+
+/* ==========================
+   TARJETAS
 ========================== */
 
 .seccion{
-
-    position:relative;
-
-    z-index:2;
-
-
-    margin:auto;
-
-
-    text-align:center;
-
+  position:relative;
+  z-index:2;
+  width:min(92%, 780px);
+  margin:34px auto;
+  padding:34px 24px;
+  text-align:center;
+  background:rgba(255,255,255,.68);
+  border:1px solid rgba(255,255,255,.82);
+  border-radius:30px;
+  box-shadow:0 18px 45px rgba(0,0,0,.22);
+  backdrop-filter:blur(7px);
 }
-
 
 .seccion h2{
-
-    font-family:"Brim Narrow Face",serif;
-
-    font-size:52px;
-
-    color:#222;
-
-    margin-bottom:35px;
-
+  font-family:"Brim Narrow Face","Times New Roman",serif;
+  font-size:46px;
+  font-weight:normal;
+  letter-spacing:2px;
+  color:#111;
+  margin-bottom:18px;
+  text-align:center;
 }
-
 
 .seccion p{
-
-    font-size:22px;
-
-    color:white;
-
-    margin:15px 0;
-
+  font-size:20px;
+  color:#111;
+  line-height:1.55;
+  margin:9px auto;
+  text-align:center;
 }
 
+/* ==========================
+   ICONOS LINEALES
+========================== */
+
+.icono-lineal{
+  width:76px;
+  height:76px;
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:iconoFlotando 2.9s ease-in-out infinite;
+}
+
+.icono-lineal svg{
+  width:72px;
+  height:72px;
+  fill:none;
+  stroke:#000;
+  stroke-width:3.2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  filter:drop-shadow(0 2px 4px rgba(255,255,255,.45));
+}
+
+@keyframes iconoFlotando{
+  0%,100%{transform:translateY(0) scale(1);}
+  50%{transform:translateY(-8px) scale(1.04);}
+}
 
 /* ==========================
-   CUENTA
+   CUENTA REGRESIVA
 ========================== */
 
 #countdown{
-
-    font-size:42px;
-
-    font-weight:bold;
-
-    color:#111;
-
+  font-size:30px;
+  font-weight:700;
+  color:#000;
+  line-height:1.5;
+  text-align:center;
 }
 
-
 /* ==========================
-   GALERIA
+   GALERÍA
 ========================== */
 
 .grid{
-
-display:grid;
-
-grid-template-columns:repeat(3,1fr);
-
-gap:20px;
-
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:16px;
+  width:100%;
+  margin-top:22px;
 }
-
 
 .grid img{
-
-width:100%;
-
-aspect-ratio:3/4;
-
-object-fit:cover;
-
-border-radius:20px;
-
-box-shadow:
-
-0 15px 40px rgba(0,0,0,.20);
-
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 14px 35px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.8);
 }
-
 
 /* ==========================
-   BOTON WHATSAPP
+   BOTONES
 ========================== */
 
-.confirmar a{
-
-display:inline-block;
-
-padding:18px 40px;
-
-border-radius:40px;
-
-background:black;
-
-color:white;
-
-text-decoration:none;
-
-font-size:20px;
-
-transition:.3s;
-
+.boton-whatsapp,
+.boton-mapa{
+  display:inline-block;
+  margin-top:20px;
+  padding:16px 32px;
+  border-radius:40px;
+  background:#000;
+  color:#fff;
+  text-decoration:none;
+  font-size:18px;
+  letter-spacing:.5px;
+  transition:.3s ease;
 }
 
-.confirmar a:hover{
-
-transform:scale(1.05);
-
+.boton-whatsapp:hover,
+.boton-mapa:hover{
+  transform:scale(1.04);
+  box-shadow:0 12px 25px rgba(0,0,0,.20);
 }
 
+/* ==========================
+   REGALO Y DRESS CODE
+========================== */
+
+.frase-regalo{
+  font-family:"Palace Script MT","Palace Script",cursive;
+  font-size:44px !important;
+  line-height:1.2 !important;
+  color:#111 !important;
+}
+
+.alias-regalo{
+  font-family:"Brim Narrow Face","Times New Roman",serif;
+  font-size:34px !important;
+  letter-spacing:2px;
+  color:#000 !important;
+  margin-top:22px !important;
+}
+
+.dress-principal{
+  font-family:"Brim Narrow Face","Times New Roman",serif;
+  font-size:34px !important;
+  letter-spacing:2px;
+  color:#111 !important;
+}
+
+.dress-code span{
+  display:block;
+  margin-top:10px;
+  font-size:19px;
+  color:#111;
+}
 
 /* ==========================
    MAPA
 ========================== */
 
 iframe{
-
-width:100%;
-
-height:420px;
-
-border:0;
-
-border-radius:25px;
-
-box-shadow:
-
-0 15px 45px rgba(0,0,0,.20);
-
+  display:block;
+  width:100%;
+  height:380px;
+  border:0;
+  border-radius:24px;
+  margin-top:18px;
+  box-shadow:0 14px 38px rgba(0,0,0,.22);
+  filter:grayscale(.35);
 }
 
+/* ==========================
+   FINAL
+========================== */
+
+.final{
+  position:relative;
+  z-index:2;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:58px 20px 100px;
+  text-align:center;
+}
+
+.final p{
+  width:100%;
+  margin:0 auto;
+  font-family:"Palace Script MT","Palace Script",cursive !important;
+  font-size:90px !important;
+  line-height:1;
+  color:#111 !important;
+  text-align:center !important;
+  font-weight:normal;
+  text-shadow:2px 2px 8px rgba(255,255,255,.45);
+}
 
 /* ==========================
    RESPONSIVE
 ========================== */
 
 @media(max-width:768px){
-
-.nombre{
-
-font-size:78px;
-
-}
-
-.titulo{
-
-font-size:36px;
-
-}
-
-.grid{
-
-grid-template-columns:1fr;
-
-}
-
-.seccion h2{
-
-font-size:38px;
-
-}
-
-#countdown{
-
-font-size:28px;
-
-}
-
-}
-/* ==========================
-   FONDO BOLA DE DISCO PREMIUM
-========================== */
-
-{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  opacity:.35;
-  background:
-    linear-gradient(45deg, rgba(255,255,255,.18) 25%, transparent 25%),
-    linear-gradient(-45deg, rgba(0,0,0,.08) 25%, transparent 25%),
-    linear-gradient(45deg, transparent 75%, rgba(255,255,255,.16) 75%),
-    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.08) 75%);
-  background-size:34px 34px;
-  background-position:0 0, 0 17px, 17px -17px, -17px 0;
-  animation:discoMove 18s linear infinite;
-}
-
-@keyframes discoMove{
-  from{
-    background-position:0 0, 0 17px, 17px -17px, -17px 0;
-  }
-  to{
-    background-position:34px 34px, 34px 51px, 51px 17px, 17px 34px;
-  }
-}
-
-/* Brillos grandes tipo reflejo */
-.seccion::before{
-  content:"";
-  position:absolute;
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  background:radial-gradient(circle, rgba(255,255,255,.55), transparent 65%);
-  filter:blur(18px);
-  opacity:.25;
-  top:20px;
-  right:10%;
-  pointer-events:none;
-}
-
-/* Íconos bola de disco decorativos */
-.cuenta::after,
-.datos::after,
-.galeria::after{
-  content:"🪩";
-  position:absolute;
-  font-size:54px;
-  opacity:.35;
-  right:30px;
-  top:35px;
-  animation:flotarDisco 4s ease-in-out infinite;
-}
-
-@keyframes flotarDisco{
-  0%,100%{
-    transform:translateY(0) rotate(0deg);
-  }
-  50%{
-    transform:translateY(-12px) rotate(8deg);
-  }
-}
-#invitacion {
-  display: none;
-  min-height: 100vh;
-  background-image: url("assets/fondo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding: 40px 16px;
-}
-
-.seccion {
-  width: min(92%, 760px);
-  margin: 40px auto;
-  padding: 35px 24px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 28px;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.20);
-  backdrop-filter: blur(5px);
-}
-
-.seccion h2 {
-  font-size: 42px;
-  color: #111;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.seccion p {
-  font-size: 20px;
-  color: #111;
-  text-align: center;
-  line-height: 1.6;
-}
-
-#countdown {
-  font-size: 30px;
-  color: #000;
-  text-align: center;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  width: 100%;
-}
-
-.grid img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  border-radius: 22px;
-}
-
-@media (max-width: 768px) {
-  .seccion {
-    width: 94%;
-    padding: 28px 18px;
+  .nombre{
+    font-size:88px;
   }
 
-  .seccion h2 {
-    font-size: 34px;
+  .titulo{
+    font-size:38px;
+    letter-spacing:5px;
   }
 
-  #countdown {
-    font-size: 24px;
+  .boton-abrir{
+    font-size:19px;
+    padding:16px 34px;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
+  #invitacion{
+    background-attachment:scroll;
+    padding:28px 10px 60px;
   }
-}
-.frase-bienvenida{
 
-    width:100%;
+  .frase-bienvenida{
+    width:94%;
+    margin:20px auto 30px;
+    padding:28px 18px;
+  }
 
-    padding:90px 20px 30px;
+  .frase-bienvenida p{
+    font-size:48px;
+  }
 
-    text-align:center;
+  .seccion{
+    width:94%;
+    padding:28px 18px;
+    margin:28px auto;
+  }
 
-}
+  .seccion h2{
+    font-size:36px;
+  }
 
-.frase-bienvenida p{
+  .seccion p{
+    font-size:18px;
+  }
 
-    font-family:"Palace Script MT","Palace Script",cursive;
+  #countdown{
+    font-size:23px;
+  }
 
-    font-size:70px;
+  .grid{
+    grid-template-columns:1fr;
+  }
 
-    color:white;
+  .grid img{
+    height:430px;
+  }
 
-    text-shadow:
-    0 0 18px rgba(255,255,255,.45)
+  .frase-regalo{
+    font-size:34px !important;
+  }
 
-}
-/* ==========================
-   FRASE DE BIENVENIDA
-========================== */
+  .alias-regalo{
+    font-size:28px !important;
+  }
 
-.frase-bienvenida{
+  iframe{
+    height:310px;
+  }
 
-    width:100%;
-
-    padding:90px 20px 30px;
-
-    text-align:center;
-
-}
-
-.frase-bienvenida p{
-
-    font-family:"Palace Script MT","Palace Script",cursive;
-
-    font-size:70px;
-
-    color:#111111;
-
-    text-shadow:
-    2px 2px 6px rgba(255,255,255,.35);
-
-.frase-regalo{
-  font-family:"Palace Script MT","Palace Script",cursive;
-  font-size:44px !important;
-  line-height:1.25;
-  color:#111 !important;
-}
-
-.alias-regalo{
-  font-family:"Brim Narrow Face",serif;
-  font-size:34px !important;
-  letter-spacing:2px;
-  color:#000 !important;
-  margin-top:25px !important;
-}
-
-.dress-code p{
-  font-family:"Brim Narrow Face",serif;
-  font-size:34px !important;
-  color:#111 !important;
-  letter-spacing:2px;
-}
-
-.dress-code span{
-  display:block;
-  margin-top:12px;
-  font-size:20px;
-  color:#111;
-
-.final{
-
-    width:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:80px 20px 120px;
-
-    text-align:center;
-
-}
-
-.final p{
-
-    width:100%;
-
-    margin:0 auto;
-
-    font-family:"Palace Script MT","Palace Script",cursive !important;
-
-    font-size:90px !important;
-
-    color:#111111 !important;
-
-    text-align:center !important;
-
-    font-weight:normal;
-
-    text-shadow:2px 2px 8px rgba(255,255,255,.35);
-
+  .final p{
+    font-size:68px !important;
+  }
 }
