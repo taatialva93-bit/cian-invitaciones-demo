@@ -1,351 +1,646 @@
+/* ==========================
+   RESET
+========================== */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-    font-family:'Segoe UI',sans-serif;
-    background:#fff7fc;
-    color:#5b3b6f;
+
+    background:#000;
+    color:white;
     overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+
 }
 
-/* LOADER */
 
-#loader{
-    position:fixed;
-    width:100%;
-    height:100vh;
-    background:linear-gradient(135deg,#ffd6ef,#e9d5ff,#d8f3ff);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    z-index:9999;
-}
-
-.loader-content{
-    text-align:center;
-}
-
-.unicornio{
-    font-size:80px;
-    animation:flotar 2s infinite ease-in-out;
-}
-
-.loader-content p{
-    font-size:22px;
-    margin-top:15px;
-    color:#7c3aed;
-    font-weight:bold;
-}
-
-@keyframes flotar{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-15px);}
-    100%{transform:translateY(0);}
-}
-
-/* PORTADA */
+/* ==========================
+   PORTADA
+========================== */
 
 .portada{
-    min-height:100vh;
-    background:
-    linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2)),
-    linear-gradient(135deg,#ffd6ef,#e9d5ff,#d8f3ff);
+
+    width:100%;
+    height:100vh;
+
+    position:relative;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    padding:20px;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at 20% 20%,rgba(255,255,255,.08),transparent 20%),
+
+    radial-gradient(circle at 80% 10%,rgba(255,255,255,.08),transparent 18%),
+
+    radial-gradient(circle at 70% 70%,rgba(255,255,255,.05),transparent 22%),
+
+    linear-gradient(180deg,#000,#080808,#111);
+
 }
 
-.card-portada{
-    background:white;
-    padding:50px 30px;
-    border-radius:35px;
-    max-width:500px;
+
+/* Destellos */
+
+.destellos{
+
+    position:absolute;
+    inset:0;
+
+    background-image:
+
+    radial-gradient(#ffffff 1px, transparent 1px);
+
+    background-size:35px 35px;
+
+    opacity:.18;
+
+    animation:parpadeo 8s linear infinite;
+
+}
+
+@keyframes parpadeo{
+
+0%{
+opacity:.08;
+}
+
+50%{
+opacity:.22;
+}
+
+100%{
+opacity:.08;
+}
+
+}
+
+
+/* ==========================
+   CONTENIDO PORTADA
+========================== */
+
+.contenido-portada{
+
+    position:relative;
+
+    z-index:5;
+
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
 }
 
-.mini{
-    text-transform:uppercase;
-    letter-spacing:3px;
-    color:#ec4899;
-    font-size:12px;
-    font-weight:bold;
+.nombre{
+
+    font-family:"Palace Script MT","Palace Script",cursive;
+
+    font-size:120px;
+
+    font-weight:normal;
+
+    color:white;
+
+    text-shadow:
+
+    0 0 15px rgba(255,255,255,.25);
+
 }
 
-.card-portada h1{
+
+.titulo{
+
+    margin-top:-15px;
+
+    font-family:"Brim Narrow Face",serif;
+
     font-size:60px;
-    color:#7c3aed;
+
+    letter-spacing:6px;
+
+    color:#d8d8d8;
+
 }
 
-.card-portada h2{
-    color:#ec4899;
-    margin-bottom:15px;
-}
 
 button{
-    background:#7c3aed;
+
+    margin-top:45px;
+
+    padding:18px 45px;
+
+    background:transparent;
+
+    border:1px solid silver;
+
     color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:50px;
+
+    border-radius:40px;
+
     cursor:pointer;
-    margin-top:20px;
-    font-weight:bold;
-    transition:.3s;
+
+    font-family:"Brim Narrow Face",serif;
+
+    font-size:22px;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
 }
 
 button:hover{
-    transform:scale(1.05);
+
+    background:silver;
+
+    color:black;
+
 }
 
-/* CONTENIDO */
 
-.oculto{
+/* ==========================
+   INVITACION
+========================== */
+
+#invitacion{
+
     display:none;
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:100vh;
+
+    background-image:url("assets/fondo.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}}
+
+
+/* Glitter */
+
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+radial-gradient(circle,#ffffff55 1px,transparent 1px);
+
+background-size:18px 18px;
+
+opacity:.25;
+
+pointer-events:none;
+
 }
 
-.hero{
-    padding:80px 20px;
+
+/* ==========================
+   SECCIONES
+========================== */
+
+.seccion{
+
+    position:relative;
+
+    z-index:2;
+
+
+    margin:auto;
+
+
     text-align:center;
-    background:linear-gradient(135deg,#ffd6ef,#e9d5ff);
+
 }
 
-.hero h1{
-    font-size:55px;
-    color:#7c3aed;
+
+.seccion h2{
+
+    font-family:"Brim Narrow Face",serif;
+
+    font-size:52px;
+
+    color:#222;
+
+    margin-bottom:35px;
+
 }
 
-.hero h2{
-    color:#ec4899;
+
+.seccion p{
+
+    font-size:22px;
+
+    color:white;
+
+    margin:15px 0;
+
 }
 
-section{
-    padding:70px 20px;
-}
 
-section h2{
-    text-align:center;
-    margin-bottom:25px;
-    color:#7c3aed;
-}
-
-/* VIDEO */
-
-.video{
-    text-align:center;
-}
-
-video{
-    width:100%;
-    max-width:700px;
-    border-radius:25px;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
-}
-
-/* CONTADOR */
+/* ==========================
+   CUENTA
+========================== */
 
 #countdown{
-    text-align:center;
-    font-size:35px;
+
+    font-size:42px;
+
     font-weight:bold;
-    color:#7c3aed;
+
+    color:#111;
+
 }
 
-/* DATOS */
 
-.datos{
-    background:white;
-    text-align:center;
-}
-
-.datos p{
-    margin:12px 0;
-    font-size:20px;
-}
-
-/* GALERIA */
+/* ==========================
+   GALERIA
+========================== */
 
 .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
-    max-width:1000px;
-    margin:auto;
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:20px;
+
 }
+
 
 .grid img{
-    width:100%;
-    border-radius:25px;
-    object-fit:cover;
-    aspect-ratio:1/1;
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    transition:.3s;
+
+width:100%;
+
+aspect-ratio:3/4;
+
+object-fit:cover;
+
+border-radius:20px;
+
+box-shadow:
+
+0 15px 40px rgba(0,0,0,.20);
+
 }
 
-.grid img:hover{
-    transform:scale(1.03);
-}
 
-/* CONFIRMAR */
-
-.confirmar{
-    text-align:center;
-    background:#fff0f8;
-}
+/* ==========================
+   BOTON WHATSAPP
+========================== */
 
 .confirmar a{
-    display:inline-block;
-    margin-top:20px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:16px 28px;
-    border-radius:50px;
-    font-weight:bold;
+
+display:inline-block;
+
+padding:18px 40px;
+
+border-radius:40px;
+
+background:black;
+
+color:white;
+
+text-decoration:none;
+
+font-size:20px;
+
+transition:.3s;
+
 }
 
-/* MAPA */
+.confirmar a:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* ==========================
+   MAPA
+========================== */
 
 iframe{
-    width:100%;
-    max-width:900px;
-    height:450px;
-    border:none;
-    border-radius:25px;
-    display:block;
-    margin:auto;
-    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+width:100%;
+
+height:420px;
+
+border:0;
+
+border-radius:25px;
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.20);
+
 }
 
-/* FOOTER */
 
-footer{
-    background:#7c3aed;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-}
-
-/* ANIMACIONES */
-
-.animar{
-    opacity:0;
-    transform:translateY(40px);
-    transition:all 1s ease;
-}
-
-.animar.visible{
-    opacity:1;
-    transform:translateY(0);
-}
-
-/* CELULAR */
+/* ==========================
+   RESPONSIVE
+========================== */
 
 @media(max-width:768px){
 
-.hero h1{
-    font-size:38px;
+.nombre{
+
+font-size:78px;
+
 }
 
-.card-portada h1{
-    font-size:42px;
+.titulo{
+
+font-size:36px;
+
+}
+
+.grid{
+
+grid-template-columns:1fr;
+
+}
+
+.seccion h2{
+
+font-size:38px;
+
 }
 
 #countdown{
-    font-size:22px;
-}
 
-iframe{
-    height:300px;
+font-size:28px;
+
 }
 
 }
-/* NIVEL 2 */
+/* ==========================
+   FONDO BOLA DE DISCO PREMIUM
+========================== */
 
-.decoracion {
-  font-size: 36px;
-  margin-bottom: 20px;
-  animation: flotar 3s infinite ease-in-out;
+{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.35;
+  background:
+    linear-gradient(45deg, rgba(255,255,255,.18) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(0,0,0,.08) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,.16) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(0,0,0,.08) 75%);
+  background-size:34px 34px;
+  background-position:0 0, 0 17px, 17px -17px, -17px 0;
+  animation:discoMove 18s linear infinite;
 }
 
-.confetti {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
+@keyframes discoMove{
+  from{
+    background-position:0 0, 0 17px, 17px -17px, -17px 0;
+  }
+  to{
+    background-position:34px 34px, 34px 51px, 51px 17px, 17px 34px;
+  }
 }
 
-.regalos,
-.calendario {
+/* Brillos grandes tipo reflejo */
+.seccion::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,255,255,.55), transparent 65%);
+  filter:blur(18px);
+  opacity:.25;
+  top:20px;
+  right:10%;
+  pointer-events:none;
+}
+
+/* Íconos bola de disco decorativos */
+.cuenta::after,
+.datos::after,
+.galeria::after{
+  content:"🪩";
+  position:absolute;
+  font-size:54px;
+  opacity:.35;
+  right:30px;
+  top:35px;
+  animation:flotarDisco 4s ease-in-out infinite;
+}
+
+@keyframes flotarDisco{
+  0%,100%{
+    transform:translateY(0) rotate(0deg);
+  }
+  50%{
+    transform:translateY(-12px) rotate(8deg);
+  }
+}
+#invitacion {
+  display: none;
+  min-height: 100vh;
+  background-image: url("assets/fondo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px 16px;
+}
+
+.seccion {
+  width: min(92%, 760px);
+  margin: 40px auto;
+  padding: 35px 24px;
   text-align: center;
-  background: linear-gradient(135deg, #fff0f8, #f3e8ff);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 28px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.20);
+  backdrop-filter: blur(5px);
 }
 
-.regalo-box {
-  max-width: 420px;
-  margin: 25px auto 0;
-  background: white;
-  padding: 28px;
-  border-radius: 30px;
+.seccion h2 {
+  font-size: 42px;
+  color: #111;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.seccion p {
   font-size: 20px;
-  line-height: 1.8;
-  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.15);
+  color: #111;
+  text-align: center;
+  line-height: 1.6;
 }
 
-.boton-mapa,
-.boton-calendario {
-  display: inline-block;
-  margin-top: 25px;
-  background: #ec4899;
-  color: white;
-  text-decoration: none;
-  padding: 16px 28px;
-  border-radius: 50px;
-  font-weight: bold;
-  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.25);
-  transition: 0.3s;
+#countdown {
+  font-size: 30px;
+  color: #000;
+  text-align: center;
 }
 
-.boton-mapa:hover,
-.boton-calendario:hover {
-  transform: scale(1.05);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  width: 100%;
 }
 
-.hero {
-  position: relative;
-  overflow: hidden;
+.grid img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 22px;
 }
 
-.hero::before {
-  content: "☁️";
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 55px;
-  opacity: 0.6;
-}
-
-.hero::after {
-  content: "🌈";
-  position: absolute;
-  bottom: 20px;
-  right: 25px;
-  font-size: 65px;
-  opacity: 0.7;
-}
-
-@media(max-width:768px) {
-  .decoracion {
-    font-size: 26px;
+@media (max-width: 768px) {
+  .seccion {
+    width: 94%;
+    padding: 28px 18px;
   }
 
-  .regalo-box {
-    font-size: 17px;
+  .seccion h2 {
+    font-size: 34px;
   }
+
+  #countdown {
+    font-size: 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+.frase-bienvenida{
+
+    width:100%;
+
+    padding:90px 20px 30px;
+
+    text-align:center;
+
+}
+
+.frase-bienvenida p{
+
+    font-family:"Palace Script MT","Palace Script",cursive;
+
+    font-size:70px;
+
+    color:white;
+
+    text-shadow:
+    0 0 18px rgba(255,255,255,.45)
+
+}
+/* ==========================
+   FRASE DE BIENVENIDA
+========================== */
+
+.frase-bienvenida{
+
+    width:100%;
+
+    padding:90px 20px 30px;
+
+    text-align:center;
+
+}
+
+.frase-bienvenida p{
+
+    font-family:"Palace Script MT","Palace Script",cursive;
+
+    font-size:70px;
+
+    color:#111111;
+
+    text-shadow:
+    2px 2px 6px rgba(255,255,255,.35);
+
+.frase-regalo{
+  font-family:"Palace Script MT","Palace Script",cursive;
+  font-size:44px !important;
+  line-height:1.25;
+  color:#111 !important;
+}
+
+.alias-regalo{
+  font-family:"Brim Narrow Face",serif;
+  font-size:34px !important;
+  letter-spacing:2px;
+  color:#000 !important;
+  margin-top:25px !important;
+}
+
+.dress-code p{
+  font-family:"Brim Narrow Face",serif;
+  font-size:34px !important;
+  color:#111 !important;
+  letter-spacing:2px;
+}
+
+.dress-code span{
+  display:block;
+  margin-top:12px;
+  font-size:20px;
+  color:#111;
+
+.final{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px 120px;
+
+    text-align:center;
+
+}
+
+.final p{
+
+    width:100%;
+
+    margin:0 auto;
+
+    font-family:"Palace Script MT","Palace Script",cursive !important;
+
+    font-size:90px !important;
+
+    color:#111111 !important;
+
+    text-align:center !important;
+
+    font-weight:normal;
+
+    text-shadow:2px 2px 8px rgba(255,255,255,.35);
+
 }
