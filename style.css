@@ -110,11 +110,8 @@ background-image:
   overflow:hidden;
   padding:42px 14px 70px;
   background-image:
-    linear-gradient(rgba(255,255,255,.20), rgba(255,255,255,.20)),
-    url("assets/fondo-disco.png");
-  background-size:cover;
-  background-position:center top;
-  background-attachment:fixed;
+linear-gradient(rgba(255,255,255,.20), rgba(255,255,255,.20)),
+url("fondo-disco.png");
 }
 
 /* velo suave para lectura */
